@@ -1,9 +1,8 @@
 <template>
   <div id="app"> <!-- Insert background images here -->
-    <div id="index" class="p-8">
+    <div id="index">
       <Header />
-      <Home />
-      
+      <Home />      
     </div>
   </div>
 </template>
