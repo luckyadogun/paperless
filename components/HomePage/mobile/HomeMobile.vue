@@ -1,5 +1,5 @@
 <template>
-    <div id="mobile" class="text-theme-secondary">
+    <div id="main-title" class="text-theme-secondary">
         <h1 class="text-3xl font-bold leading-none mb-6">
             Ship your startup idea
             to real users, with real code.
