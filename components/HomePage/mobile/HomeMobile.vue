@@ -1,6 +1,6 @@
 <template>
-    <div id="main-title" class="text-theme-secondary">
-        <h1 class="text-3xl font-bold leading-none mb-6">
+    <div id="main-title" class="text-theme-secondary" style="font-family: 'Inter', sans-serif;">
+        <h1 class="text-3xl font-black leading-none mb-6">
             Ship your startup idea
             to real users, with real code.
             No coding skills required
@@ -13,9 +13,9 @@
             <InviteForm />
         </div>
         
-        <p class="text-center tracking-tighter font-bold text-xl mb-6">How Paperless Works</p>
+        <p class="text-center tracking-tighter font-black text-xl mb-4">How Paperless Works</p>
         
-        <div class="h-auto w-full py-8 px-2 mb-10" id="how_it_works">
+        <div class="h-auto w-full py-8 px-2 mb-8" id="how_it_works" style="font-family: 'Actor', sans-serif;">
             <div id="item-1" class="flex justify-center items-center mb-12" v-for="item in cardItems" :key="item.id">
                 <div class="mr-5 shadow-xl rounded-full h-16 w-20 flex items-center justify-center bg-white">
                     <img :src="require(`~/assets/images/${item.url}`)" class="h-10 items-center" alt="">
@@ -43,13 +43,3 @@ export default {
 
 }
 </script>
-
-<style>
-    #mobile {
-        font-family: 'Inter', sans-serif;
-    }
-
-    #how_it_works {
-        font-family: 'Actor', sans-serif;
-    }
-</style>
