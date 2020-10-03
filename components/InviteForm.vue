@@ -7,7 +7,7 @@
           placeholder="Enter your email address"
           class="w-full bg-gray-300 focus:outline-none h-16 rounded-l-lg text-xs">
 
-          <button @click="subscribeUser()" class="bg-theme-primary h-16 w-64 text-white font-bold rounded-r-lg text-center focus:outline-none">
+          <button @click="validateEmail(email)" class="bg-theme-primary h-16 w-64 text-white font-bold rounded-r-lg text-center focus:outline-none">
               Get Invited
           </button>  
       </div>
@@ -33,25 +33,25 @@ export default {
       email: '',
       emailValidated: false,
       response: {
-        success: { message: "Successful! Check your email for a message from us.", set: true },
-        failed: { message: "Ooops! Something went wrong somewhere. Try again!", set: false },        
+        success: { message: "Successful! Check your email for a message from us.😎", set: true },
+        failed: { message: "Ooops! Something went wrong somewhere. Try again!😞", set: false },        
       },
       notificationVisible: false
     }
   },
 
   methods: {
-    subscribeUser: function () {      
-      let emailCorrect = confirm(`Kindly confirm your email: ${this.email}!`);
+    subscribeUser: function (email) {     
+      
+      // install mailchimp dependency
+      // add user to the list.
 
-      if (emailCorrect == true) {
-        // install mailchimp dependency
-        // add user to the list.
+      if (email /* check if response from mailchimp server is true */) {
         this.displayNotification({success:true, failed:false});
       } else {
+        this.response.failed.message = "You already have an account with us!😜"
         this.displayNotification({success:false, failed:true});
-      }
-      this.email = ''
+      }      
     },
 
     displayNotification: function({success, failed}={}) {
@@ -62,7 +62,14 @@ export default {
     },
 
     validateEmail: function(email) {
-      // const re = \/S+@\S+\.\S+/;
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      
+      if (re.test(email) === true) {
+        this.subscribeUser(email);
+      } else {
+        this.displayNotification({success:false, failed:true});
+      }
+      this.email = ''
     }
   },
 
