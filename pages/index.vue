@@ -26,8 +26,6 @@ export default {
   beforeMount() {
     if (screen.width < 768) {
         this.backgroundManAsset = '';
-      } else {
-        this.backgroundManAsset = '/_nuxt/assets/images/man.png';
     }
   }
 }
