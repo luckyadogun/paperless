@@ -5,7 +5,7 @@
           v-model.lazy="email"
           type="email"
           placeholder="Enter your email address"
-          class="w-full bg-gray-300 focus:outline-none h-16 rounded-l-lg text-xs">
+          class="w-full bg-gray-300 focus:outline-none h-16 rounded-l-lg text-md">
 
           <button @click="validateEmail(email)" class="bg-theme-primary h-16 w-64 text-white font-bold rounded-r-lg text-center focus:outline-none">
               Get Invited

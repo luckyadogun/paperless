@@ -1,29 +1,29 @@
 <template>
-    <div id="main-title" class="text-theme-secondary" style="font-family: 'Inter', sans-serif;">
-        <h1 class="text-3xl font-black leading-none mb-6">
-            Ship your startup idea
-            to real users, with real code.
-            No coding skills required
-        </h1>
-        <p class="text-sm mb-8 font-medium ">
-            Tweak our fully customizable mobile app scaffolds to fit your concept. 
-            Launch, validate your idea and gain real world feedback in <span class="font-black">30 days or less!</span>
-        </p>
+    <div>
+        <div class="text-4xl">
+            <MainTitle />
+        </div>
+
+        <div class="text-md leading-none mb-8 font-medium ">
+            <SubTitle />
+        </div>
+
         <div class="mb-20">
             <InviteForm />
         </div>
         
-        <p class="text-center tracking-tighter font-black text-xl mb-4">How Paperless Works</p>
-        
-        <div class="h-auto w-full py-8 px-2 mb-8" id="how_it_works" style="font-family: 'Actor', sans-serif;">
-            <div id="item-1" class="flex justify-center items-center mb-12" v-for="item in cardItems" :key="item.id">
-                <div class="mr-5 shadow-xl rounded-full h-16 w-20 flex items-center justify-center bg-white">
-                    <img :src="require(`~/assets/images/${item.url}`)" class="h-10 items-center" alt="">
-                </div>
-                <div class="shadow-xl rounded-lg h-24 w-full flex items-center justify-start bg-white px-4 text-sm leading-tight font-bold">
-                    {{ item.text }}
-                </div>
-            </div>           
+        <div>
+            <p class="text-center tracking-tighter font-black text-xl mb-4">How Paperless Works</p>
+            <div class="h-auto w-full py-8 px-2 mb-8" id="how_it_works" style="font-family: 'Actor', sans-serif;">
+                <div id="item-1" class="flex justify-center items-center mb-12" v-for="item in cardItems" :key="item.id">
+                    <div class="mr-5 shadow-xl rounded-full h-16 w-20 flex items-center justify-center bg-white">
+                        <img :src="require(`~/assets/images/${item.url}`)" class="h-10 items-center" alt="">
+                    </div>
+                    <div class="shadow-xl rounded-lg h-24 w-full flex items-center justify-start bg-white px-4 text-sm leading-tight font-bold">
+                        {{ item.text }}
+                    </div>
+                </div>           
+            </div>
         </div>
     </div>
 </template>

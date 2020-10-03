@@ -2,10 +2,11 @@
   <div>
     <div 
       id="mobile" 
-      v-bind:style="{ 
-          backgroundImage:  `url(${backgroundImagePath})`, 
+      :style="{ 
+          backgroundImage:  `url(${backgroundMainAsset})`, 
           backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'right',
+          backgroundPosition: 'top -20px right -30px',
+          backgroundSize: '120px 120px'
       }">
       <div 
         class="md:hidden p-8">
@@ -14,22 +15,25 @@
     </div>
     
     <!-- web -->
-    <div 
-      id="web">
-      <div 
-        class="hidden md:block p-8">
-        <Logo />
-      </div>
+    <div id="web" class="hidden md:block md:py-8 md:px-10 lg:px-20 lg:py-10">
+      <nav class="flex items-center justify-between">
+        <LogoWeb />
+        <div class="flex justify-center text-theme-secondary tracking-tighter items-center font-black" style="font-family: 'Inter', sans-serif;">
+          <p class="mr-20 text-sm lg:text-lg">How it Works</p>
+          <button class="border-theme-primary tracking-tight font-bold px-6 py-2 rounded-full border-2 border-solid text-sm lg:text-lg text-white">Get Started</button>
+        </div>
+      </nav>
     </div>
   </div>
 </template>
 
 <script>
-import backgroundImagePath from '~/assets/images/main.svg'
+import backgroundMainAsset from '~/assets/images/main.svg'
+
 export default {
   data() {
     return {
-      backgroundImagePath
+      backgroundMainAsset
     }
   }
 }
