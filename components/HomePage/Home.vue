@@ -1,20 +1,25 @@
 <template>
-  <div class="mt-12">
+  <div class="mt-8">
     <div id="mobile" class="md:hidden">
-      <HomeMobile />
+      <div class="p-8">
+        <HomeMobile />
+      </div>
+      <MobileNotificationBar />
     </div>
-    <div id="web" class="hidden md:block">
+    <div id="web" class="hidden md:block p-8">
       <h1>Web Version</h1>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import backgroundImagePath from '~/assets/images/main.svg'
 
+export default {
+  data() {
+    return {
+      backgroundImagePath
+    }
+  }
 }
 </script>
-
-<style>
-
-</style>
