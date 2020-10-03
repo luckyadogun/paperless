@@ -46,7 +46,7 @@ export default {
 
       if (emailCorrect == true) {
         // install mailchimp dependency
-        // add user to the list
+        // add user to the list.
         this.displayNotification({success:true, failed:false});
       } else {
         this.displayNotification({success:false, failed:true});
