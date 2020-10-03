@@ -3,11 +3,11 @@
       <div class="flex">
           <input
           v-model.lazy="email"
-          type="text"
+          type="email"
           placeholder="Enter your email address"
-          class="w-full bg-gray-300 focus:outline-none h-16 rounded-l-lg">
+          class="w-full bg-gray-300 focus:outline-none h-16 rounded-l-lg text-xs">
 
-          <button @click="subscribeUser()" class="bg-theme-primary h-16 w-auto text-white px-8 font-bold rounded-r-lg text-center focus:outline-none">
+          <button @click="subscribeUser()" class="bg-theme-primary h-16 w-64 text-white font-bold rounded-r-lg text-center focus:outline-none">
               Get Invited
           </button>  
       </div>
@@ -31,9 +31,10 @@ export default {
   data () {
     return {
       email: '',
+      emailValidated: false,
       response: {
-        success: { message: "Successful! Check your email for a message from us.", set: false },
-        failed: { message: "Ooops! Something went wrong somewhere. Try again!", set: true }
+        success: { message: "Successful! Check your email for a message from us.", set: true },
+        failed: { message: "Ooops! Something went wrong somewhere. Try again!", set: false },        
       },
       notificationVisible: false
     }
@@ -58,6 +59,10 @@ export default {
       this.response.failed.set = failed;
       this.notificationVisible = true;
       return setTimeout( () => this.notificationVisible = false, 5000)
+    },
+
+    validateEmail: function(email) {
+      // const re = \/S+@\S+\.\S+/;
     }
   },
 
@@ -68,7 +73,7 @@ export default {
 <style>
   input, ::-webkit-input-placeholder {
     font-weight: bold;
-    text-indent: 20px;
+    text-indent: 10px;
     color: #284268;
   }
 </style>
