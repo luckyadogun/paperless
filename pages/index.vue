@@ -1,6 +1,6 @@
 <template>
   <div id="app" 
-    class="md:bg-theme-tertiary h-screen"
+    class="md:bg-theme-tertiary h-full"
     :style="{ 
           backgroundImage:  `url(${backgroundManAsset})`, 
           backgroundRepeat: 'no-repeat',
@@ -26,8 +26,6 @@ export default {
   beforeMount() {
     if (screen.width < 768) {
         this.backgroundManAsset = '';
-      } else {
-        this.backgroundManAsset = '/_nuxt/assets/images/man.png';
     }
   }
 }
