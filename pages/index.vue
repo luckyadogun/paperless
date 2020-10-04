@@ -1,6 +1,6 @@
 <template>
   <div id="app" 
-    class="md:bg-theme-tertiary h-screen"
+    class="md:bg-theme-tertiary h-full"
     :style="{ 
           backgroundImage:  `url(${backgroundManAsset})`, 
           backgroundRepeat: 'no-repeat',
