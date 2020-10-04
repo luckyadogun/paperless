@@ -19,8 +19,13 @@
       <nav class="flex items-center justify-between">
         <LogoWeb />
         <div class="flex justify-center text-theme-secondary tracking-tighter items-center font-black" style="font-family: 'Inter', sans-serif;">
-          <p class="mr-20 text-sm lg:text-lg">How it Works</p>
-          <button class="border-theme-primary tracking-tight font-bold px-6 py-2 rounded-full border-2 border-solid text-sm lg:text-lg text-white">Get Started</button>
+          <NuxtLink to="/">
+            <p class="mr-20 text-sm lg:text-lg">How it Works</p>
+          </NuxtLink>
+
+          <NuxtLink to="/">
+            <button class="border-theme-primary focus:outline-none tracking-tight font-normal px-6 py-2 rounded-full border-2 border-solid text-xs lg:text-lg text-white">Get Started</button>
+          </NuxtLink>
         </div>
       </nav>
     </div>
