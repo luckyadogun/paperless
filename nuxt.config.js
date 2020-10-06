@@ -25,7 +25,10 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
-  buildModules: ['@nuxtjs/tailwindcss'],
+  buildModules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv'
+  ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
@@ -33,5 +36,9 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+  },
+
+  env: {
+    baseUrl: process.env.BASE_URL // || 'https://customdomain.com
   }
 }
