@@ -12,8 +12,9 @@ export const state = () => ({
         email: '',
         emailValidated: false,
         response: {
-            success: { message: "Successful! Check your email for a message from us.😎", set: false },
-            failed: { message: "Ooops! Something went wrong somewhere. Try again!😞", set: false },        
+            success: false ,
+            failed: false ,     
+            message: ""   
         },
         notificationVisible: false
     },
@@ -23,6 +24,7 @@ export const state = () => ({
         backgroundImageBlank: ''
     }
 })
+
 
 export const mutations = {
     howItWorksItems(state) {
@@ -39,8 +41,10 @@ export const mutations = {
 
     updateNotif (state, payload) {
         state.inviteFormItems.notificationVisible = true
-        state.inviteFormItems.response.success.set = payload.success
-        state.inviteFormItems.response.failed.set = payload.failed 
+        state.inviteFormItems.response.success = payload.success
+        state.inviteFormItems.response.failed = payload.failed 
+        state.inviteFormItems.response.message = payload.message 
+
         state.inviteFormItems.email = ''  
         // setTimeout( () => state.inviteFormItems.notificationVisible = false, 5000)     
     },
