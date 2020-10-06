@@ -1,57 +1,74 @@
 <template>
-  <div class="mt-8 text-theme-secondary" style="font-family: 'Inter', sans-serif;">
-    <div id="mobile" class="md:hidden">
-      <div class="p-8">
-        <HomeMobile />
-      </div>
-      <MobileNotificationBar />
-    </div>
 
-    <div id="web" class="hidden md:block md:p-10 lg:px-20">
-      <div class="text-4xl lg:text-5xl xl:text-6xl w-2/3" 
-        style="font-family: 'Inter', sans-serif;"
-        :style="{ 
-          backgroundImage:  `url(${backgroundPinkieAsset})`, 
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'right bottom',
-          backgroundSize: '120px 120px'
-        }">
-        <MainTitle />
-      </div>
-      <div class="text-lg mb-8 font-medium md:w-2/3 lg:w-3/6" 
-        style="font-family: 'Inter', sans-serif;">
-          <SubTitle />
-      </div>
-      <div class="mb-20 md:w-2/3 lg:w-3/6">
-          <InviteForm />
-          <p class="my-5 text-sm font-bold"> We are launching to the world in 3-2-1. 
-            Gain Early Access to our service and connect with our founders.
-          </p>
-      </div>
+  <div>
 
-      <div id="testimonial" class="px-16 xl:px-24 py-6 h-40 w-3/6 mb-20 xl:text-xl lg:text-lg md:hidden lg:block"
-        :style="{ 
-          backgroundImage:  `url(${backgroundQuoteAsset})`, 
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'left top -20px',
-          backgroundSize: '60px 100px'
-        }">
-        <img @click="changeQuote()" class="ml-auto mb-4" :src="`${arrowAsset}`" alt="arrow">
-        <p class="leading-6 font-medium mb-4">
-          {{ currentQuote.text }}
-        </p>
-        <p class="quote-author ml-auto">
-          {{ currentQuote.author }}
-        </p>
-      </div>
-     
+        <div class="mt-8 text-theme-secondary" style="font-family: 'Inter', sans-serif;">
+          <div id="mobile" class="md:hidden">
+            <div class="p-8">
+              <HomeMobile />
+            </div>
+            <MobileNotificationBar />
+          </div>
+        </div>
+
+        <div :style="{ 
+                backgroundImage:  `url(${backgroundManAsset})`, 
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'top -49px right -100px',
+            }" class="-mt-20">
+          <div class="hidden md:block md:p-10 lg:px-20">
+            <div class="text-4xl py-8 lg:text-5xl xl:text-6xl w-2/3" 
+              style="font-family: 'Inter', sans-serif;"
+              :style="{ 
+                backgroundImage:  `url(${backgroundPinkieAsset})`, 
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'right bottom',
+                backgroundSize: '120px 120px'
+              }">
+              <MainTitle />
+            </div>
+            <div class="text-lg mb-8 font-medium md:w-2/3 lg:w-3/6" 
+              style="font-family: 'Inter', sans-serif;">
+                <SubTitle />
+            </div>
+            <div class="mb-20 md:w-2/3 lg:w-3/6">
+                <InviteForm />
+                <p class="my-5 text-xs font-semibold"> We are launching to the world in 3-2-1. 
+                  Gain Early Access to our service and connect with our founders.
+                </p>
+            </div>
+
+            <div id="testimonial" class="px-16 xl:px-24 py-6 h-40 w-3/6 mb-20 xl:text-xl lg:text-lg md:hidden lg:block"        
+              :style="{ 
+                backgroundImage:  `url(${backgroundQuoteAsset})`, 
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'left top -20px',
+                backgroundSize: '60px 100px',
+              }">
+              <img @click="changeQuote()" class="ml-auto mb-4" :src="`${arrowAsset}`" alt="arrow">
+              <p class="leading-6 font-medium mb-4" style="font-family: 'Abel', sans-serif;">
+                {{ currentQuote.text }}
+              </p>
+              <p class="quote-author ml-auto" style="font-family: 'Abhaya Libre', serif;">
+                {{ currentQuote.author }}
+              </p>
+            </div>      
+            
+          </div>
+
+          <div class="hidden md:flex">
+              <HowItWorks />
+          </div>
+
+        </div>
+            
     </div>
-  </div>
 </template>
 
 <script>
 import backgroundPinkieAsset from '~/assets/images/pinkie.svg'
 import backgroundQuoteAsset from '~/assets/images/quote.svg'
+import backgroundManAsset from '~/assets/images/man.png'
 import arrowAsset from '~/assets/images/arrow.svg'
 
 export default {
@@ -59,6 +76,7 @@ export default {
     return {
       backgroundPinkieAsset,
       backgroundQuoteAsset,
+      backgroundManAsset,
       arrowAsset,
       quotes: [
         {text: 'I still cannot believe we launched ZaraSoft and got funding ' + 
@@ -91,12 +109,7 @@ export default {
 </script>
 
 <style>
-  #testimonial {
-    font-family: 'Abel', sans-serif;
-  }
-
   .quote-author {
-    font-family: 'Abhaya Libre', serif;
     float: right;
   }
 </style>
