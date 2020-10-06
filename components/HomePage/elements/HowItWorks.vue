@@ -6,7 +6,8 @@
                 <div class="mr-5 md:mx-8 shadow-xl md:shadow-none rounded-full h-16 w-20 md:w-32 lg:w-24 flex items-center justify-center bg-white">
                     <img :src="require(`~/assets/images/${item.url}`)" class="h-10 items-center" alt="">
                 </div>
-                <div class="text-theme-secondary shadow-xl md:shadow-none rounded-lg h-24 md:h-40 lg:h-32 w-full flex items-center justify-start bg-white px-4 text-sm leading-tight font-bold">
+                <div class="text-theme-secondary shadow-xl md:shadow-none rounded-lg h-24 md:h-40 lg:h-32 w-full flex items-center justify-start bg-white px-4 text-sm leading-tight font-bold"
+                    style="font-family: 'Inter', sans-serif;">
                     {{ item.text }}
                 </div>
             </div>           
