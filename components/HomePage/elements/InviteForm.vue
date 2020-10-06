@@ -14,11 +14,11 @@
       </form>
 
       <div v-if="data.notificationVisible" class="mt-5 text-sm font-bold  text-theme-secondary" style="font-family: 'Inter', sans-serif;">
-          <p v-if="data.response.success.set" class="bg-green-200 text-xs text-center p-4 rounded-lg">
-              {{ data.response.success.message }}
+          <p v-if="data.response.success" class="bg-green-200 text-xs text-center p-4 rounded-lg">
+              {{ data.response.message }}
           </p>  
-          <p v-else-if="data.response.failed.set" class="bg-red-200 text-xs text-center p-4 rounded-lg">
-              {{ data.response.failed.message }}
+          <p v-else-if="data.response.failed" class="bg-red-200 text-xs text-center p-4 rounded-lg">
+              {{ data.response.message }}
           </p>  
       </div>
 
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import {validateEmail, subscribeUser} from '~/helpers/store/storeHelper';
+import {validateEmail, confirmEmailExists, subscribeUser} from '~/helpers/store/storeHelper';
 
 export default {
 
@@ -51,12 +51,23 @@ export default {
   methods: {
     execute: function() {
       // console.log(this.data.email);
-      let email = validateEmail(this.data.email);
-      if (email) {
-        subscribeUser(email);
-        this.$store.commit('updateNotif', {success: true, failed: false})
+      let emailIsValid = validateEmail(this.data.email);
+
+      if (emailIsValid) {
+
+        subscribeUser(this.data.email);
+        this.$store.commit('updateNotif', { 
+            success: true, 
+            failed: false, 
+            message: "Successful! Watch your email account for a message from us.😎"
+          });
+        
       } else {
-        this.$store.commit('updateNotif', {success: false, failed: true})
+        this.$store.commit('updateNotif', { 
+          success: false, 
+          failed: true, 
+          message: "Ooops! Kindly confirm your email your email and try again!😞"
+          });
       }
     }
   }

@@ -9,10 +9,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "@mailchimp/mailchimp_marketing": "^3.0.21",
     "@nuxtjs/dotenv": "^1.4.1",
+    "axios": "^0.20.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.5",
+    "sib-api-v3-sdk": "^8.0.1",
     "tailwindcss": "^1.8.10"
   },
   "devDependencies": {
