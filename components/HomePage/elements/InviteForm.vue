@@ -1,6 +1,12 @@
 <template>
   <div id="invite">
-      <form name="invite-form" class="flex" netlify>
+      <form name="invite-form" 
+        class="flex"
+        method="post" 
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        >
+            <input type="hidden" name="invite-form" />
             <input
             v-model.lazy="email"
             type="email"
