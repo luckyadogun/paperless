@@ -33,12 +33,12 @@
             </div>
             <div class="mb-20 md:w-2/3 lg:w-3/6">
                 <InviteForm />
-                <p class="my-5 text-xs font-semibold"> We are launching to the world in 3-2-1. 
+                <p class="my-5 text-xs text-center font-semibold text-theme-secondary "> We are launching to the world in 3-2-1. 
                   Gain Early Access to our service and connect with our founders.
                 </p>
             </div>
 
-            <div id="testimonial" class="px-16 xl:px-24 py-6 h-40 w-3/6 mb-20 xl:text-xl lg:text-lg md:hidden lg:block"        
+            <div id="testimonial" class="px-16 xl:px-24 py-6 h-40 w-3/6 mb-20 xl:text-xl lg:text-lg md:hidden lg:block"       
               :style="{ 
                 backgroundImage:  `url(${backgroundQuoteAsset})`, 
                 backgroundRepeat: 'no-repeat',
@@ -46,17 +46,17 @@
                 backgroundSize: '60px 100px',
               }">
               <img @click="changeQuote()" class="ml-auto mb-4" :src="`${arrowAsset}`" alt="arrow">
-              <p class="leading-6 font-medium mb-4" style="font-family: 'Abel', sans-serif;">
+              <p class="quote-text leading-6 font-medium mb-4 text-theme-secondary" style="font-family: 'Abel', sans-serif;">
                 {{ currentQuote.text }}
               </p>
-              <p class="quote-author ml-auto" style="font-family: 'Abhaya Libre', serif;">
+              <p class="quote-author ml-auto text-theme-secondary" style="font-family: 'Abhaya Libre', serif;">
                 {{ currentQuote.author }}
               </p>
             </div>      
             
           </div>
 
-          <div class="hidden md:flex">
+          <div class="hidden md:flex text-theme-secondary" style="font-family: 'Inter', sans-serif;">
               <HowItWorks />
           </div>
 
@@ -109,7 +109,14 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Abhaya+Libre:wght@700&family=Actor&family=Inter:wght@300;900&family=PT+Sans:wght@700&display=swap');
+
   .quote-author {
     float: right;
+    font-family: 'Abhaya Libre', serif;
+  }
+
+  .quote-text {
+    font-family: 'Abel', sans-serif;
   }
 </style>
