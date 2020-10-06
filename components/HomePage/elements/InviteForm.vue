@@ -1,12 +1,7 @@
 <template>
   <div id="invite">
       <form name="invite-form" 
-        class="flex"
-        method="post" 
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        >
-            <input type="hidden" name="invite-form" />
+        class="flex">
             <input
             v-model.lazy="email"
             type="email"
@@ -18,7 +13,7 @@
             </button>  
       </form>
 
-      <div v-if="data.notificationVisible" class="mt-5 text-sm font-bold">
+      <div v-if="data.notificationVisible" class="mt-5 text-sm font-bold  text-theme-secondary" style="font-family: 'Inter', sans-serif;">
           <p v-if="data.response.success.set" class="bg-green-200 text-xs text-center p-4 rounded-lg">
               {{ data.response.success.message }}
           </p>  

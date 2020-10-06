@@ -33,7 +33,9 @@
             </div>
             <div class="mb-20 md:w-2/3 lg:w-3/6">
                 <InviteForm />
-                <p class="my-5 text-xs text-center font-semibold text-theme-secondary "> We are launching to the world in 3-2-1. 
+                <p class="my-5 text-xs text-center font-semibold text-theme-secondary"
+                  style="font-family: 'Inter', sans-serif;"> 
+                  We are launching to the world in 3-2-1. 
                   Gain Early Access to our service and connect with our founders.
                 </p>
             </div>
@@ -113,10 +115,6 @@ export default {
 
   .quote-author {
     float: right;
-    font-family: 'Abhaya Libre', serif;
   }
 
-  .quote-text {
-    font-family: 'Abel', sans-serif;
-  }
 </style>
