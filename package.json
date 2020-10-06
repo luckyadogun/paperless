@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.21",
+    "@nuxtjs/dotenv": "^1.4.1",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.5",
     "tailwindcss": "^1.8.10"
