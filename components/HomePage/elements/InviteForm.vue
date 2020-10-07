@@ -66,7 +66,7 @@ export default {
         this.$store.commit('updateNotif', { 
           success: false, 
           failed: true, 
-          message: "Ooops! Kindly confirm your email your email and try again!😞"
+          message: "Ooops! Kindly confirm your email address and try again!😞"
           });
       }
     }
