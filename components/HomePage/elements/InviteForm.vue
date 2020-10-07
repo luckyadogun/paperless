@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import {validateEmail, confirmEmailExists, subscribeUser} from '~/helpers/store/storeHelper';
+import {validateEmail, subscribeUser} from '~/helpers/store/storeHelper';
 
 export default {
 
