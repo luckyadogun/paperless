@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -39,6 +41,7 @@ export default {
   },
 
   env: {
-    baseUrl: process.env.BASE_URL // || 'https://customdomain.com
+    API_URL: process.env.API_URL,
+    API_KEY: process.env.API_KEY,
   }
 }
