@@ -5,7 +5,21 @@
         <div class="mt-8 text-theme-secondary" style="font-family: 'Inter', sans-serif;">
           <div id="mobile" class="md:hidden">
             <div class="p-8">
-              <HomeMobile />
+              <div class="text-4xl">
+                  <MainTitle />
+              </div>
+
+              <div class="text-md leading-none mb-8 font-medium ">
+                  <SubTitle />
+              </div>
+
+              <div class="mb-20">
+                  <InviteForm />
+              </div>
+              
+              <div>
+                  <HowItWorks />
+              </div>
             </div>
             <MobileNotificationBar />
           </div>
