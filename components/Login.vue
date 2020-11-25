@@ -10,7 +10,7 @@
     </div>
 
     <div 
-      id="web" class="hidden md:block h-screen">
+      id="webx" class="hidden md:block h-screen">
       <HeaderWebBlue />  
 
       <div class="flex w-full mt-10">
@@ -36,7 +36,9 @@ export default {
 <style>
   
 @media only screen and (min-width: 1280px) {
-  #web{
+  #webx{
+      /* position: fixed; */
+      background: border-box;
       background-image: url('https://res.cloudinary.com/zencoder/image/upload/v1606309681/hand_km845m.svg');
       background-repeat: no-repeat;
       background-size: 700px;
