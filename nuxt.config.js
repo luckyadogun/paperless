@@ -12,6 +12,8 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Abel&family=Abhaya+Libre:wght@700&family=Actor&family=Inter:wght@300;900&family=PT+Sans:wght@700&display=swap' },
+    ],
+    scripts: [
     ]
   },
 
@@ -35,6 +37,15 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    ['nuxt-fontawesome', {
+            component: 'fa',
+            imports: [
+              {
+                set: '@fortawesome/free-solid-svg-icons',
+                icons: ['faDollarSign', 'faEye']
+              }
+            ]
+          }]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
