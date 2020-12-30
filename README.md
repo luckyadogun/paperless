@@ -1,4 +1,24 @@
 # paperless
+Created by: **Lucky Adogun**
+
+LICENSE: GNU GPLv3: https://github.com/luckyadogun/paperless/blob/main/LICENSE
+
+A web 3.0 Ecommerce platform to help developers sell mobile app interfaces
+
+Built With: 
+* VueJS/NuxtJS 
+* Figma 
+* TailwindCSS 
+* Django REST API 
+* AmazonS3 
+* Docker 
+* PostgreSQL
+* Netlify
+* Heroku
+
+![Floow Homepage](https://github.com/luckyadogun/paperless/blob/main/Home-web.png "Floow Home Screen")
+![Floow Dashboard](https://github.com/luckyadogun/paperless/blob/main/dashboard.png "Floow Dashboard Screen")
+![Floow Auth](https://github.com/luckyadogun/paperless/blob/main/login.png "Floow Login Screen")
 
 ## Build Setup
 
