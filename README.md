@@ -1,6 +1,8 @@
 # paperless
 Created by: **Lucky Adogun**
 
+[![Visits Badge](https://badges.pufler.dev/visits/luckyadogun/paperless)](https://badges.pufler.dev)
+
 LICENSE: GNU GPLv3: https://github.com/luckyadogun/paperless/blob/main/LICENSE
 
 A web 3.0 Ecommerce platform to help developers sell mobile app interfaces
